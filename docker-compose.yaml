@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  deepspeech_api:
+    build:
+      context: .
+      dockerfile: docker/DockerFile
+    container_name: deepspeech_api
+    restart: unless-stopped
+    ports:
+      - 3000:3000
